@@ -1,0 +1,7 @@
+{
+  "name": "PayUCheckoutProIonicSample",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,39 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {
+      "res/xml/config.xml": {
+        "parents": {
+          "/*": [
+            {
+              "xml": "<feature name=\"PayUCheckoutProCordova\"><param name=\"android-package\" value=\"com.payu.cordova.PayUCheckoutProCordova\" /></feature>",
+              "count": 1
+            }
+          ]
+        }
+      }
+    }
+  },
+  "installed_plugins": {
+    "cordova-payu-checkoutpro": {
+      "PACKAGE_NAME": "com.payu.sample"
+    }
+  },
+  "dependent_plugins": {},
+  "modules": [
+    {
+      "id": "cordova-payu-checkoutpro.PayUCheckoutProCordova",
+      "file": "plugins/cordova-payu-checkoutpro/www/PayUCheckoutProCordova.js",
+      "pluginId": "cordova-payu-checkoutpro",
+      "clobbers": [
+        "cordova.plugins.PayUCheckoutProCordova"
+      ]
+    }
+  ],
+  "plugin_metadata": {
+    "cordova-payu-checkoutpro": "1.0.0"
+  }
+}

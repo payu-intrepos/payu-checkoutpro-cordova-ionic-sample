@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+    http://www.apache.org/licenses/LICENSE-2.0
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+<!--    <script type="text/javascript">-->
+<!--        window.onerror = function(message, url, lineNumber) {-->
+<!--            console.log("Test Error: "+message+" in "+url+" at line "+lineNumber);-->
+<!--        }-->
+<!--    </script>-->
+<head>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap:; style-src 'self' 'unsafe-inline'; media-src *">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=0" />
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <title>Sample Page</title>
+</head>
+<body>
+<div class="app col-5">
+    <div class="header">
+        <h1>Checkout Pro Sample App</h1>
+    </div>
+    <div class="from-wrap">
+<!--        <div class="col-5" style="text-align: center;">-->
+<!--            <button id="payment" class="btn" onclick="app.addBookmark()">Payment</button>-->
+<!--        </div>-->
+        <div class="row">
+            <label class="col-4" for="bookmark">Prod Environment </label>
+            <div class="col-8">
+                <label class="switch">
+                    <input id="environment" type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+        <div class="row">
+            <label class="col-4" for="bookmark">Key</label>
+            <div class="col-8">
+                <input id="key" type="text" />
+            </div>
+        </div>
+        <div class="row">
+            <label class="col-4" for="bookmark">Salt</label>
+            <div class="col-8">
+                <input id="merchantSalt" type="text" />
+            </div>
+        </div>
+        <div class="row">
+            <label class="col-4" for="bookmark">Amount</label>
+            <div class="col-8">
+                <input id="amount" type="text" />
+            </div>
+        </div>
+        <div class="row">
+            <label class="col-4" for="bookmark">Product Info</label>
+            <div class="col-8">
+                <input id="productInfo" type="text" />
+            </div>
+        </div>
+        <div class="row">
+            <label class="col-4" for="bookmark">First Name</label>
+            <div class="col-8">
+                <input id="firstName" type="text" />
+            </div>
+        </div>
+        <div class="row">
+            <label class="col-4" for="bookmark">E-mail</label>
+            <div class="col-8">
+                <input id="email" type="text" />
+            </div>
+        </div>
+        <div class="row">
+            <label class="col-4" for="bookmark">Phone</label>
+            <div class="col-8">
+                <input id="phone" type="text" />
+            </div>
+        </div>
+        <div class="row">
+            <label class="col-4" for="bookmark">iOS SURL</label>
+            <div class="col-8">
+                <input id="ios_surl" type="text" />
+            </div>
+        </div>
+        <div class="row">
+            <label class="col-4" for="bookmark">iOS FURL</label>
+            <div class="col-8">
+                <input id="ios_furl" type="text" />
+            </div>
+        </div>
+        <div class="row">
+            <label class="col-4" for="bookmark">Android SURL</label>
+            <div class="col-8">
+                <input id="android_surl" type="text" />
+            </div>
+        </div>
+        <div class="row">
+            <label class="col-4" for="bookmark">Android FURL</label>
+            <div class="col-8">
+                <input id="android_furl" type="text" />
+            </div>
+        </div>
+        <div class="row">
+            <label class="col-4" for="bookmark">User Credential</label>
+            <div class="col-8">
+                <input id="userCredential" type="text" />
+            </div>
+        </div>
+        <h2>Customizations</h2>
+        <div class="row">
+            <label class="col-4" for="bookmark">Primary Color(iOS)</label>
+            <div class="col-8">
+                <input id="primaryColor" type="text" />
+            </div>
+        </div>
+        <div class="row">
+            <label class="col-4" for="bookmark">Secondary Color(iOS)</label>
+            <div class="col-8">
+                <input id="secondaryColor" type="text" />
+            </div>
+        </div>
+        <div class="row">
+            <label class="col-4" for="bookmark">Merchant Name</label>
+            <div class="col-8">
+                <input id="merchantName" type="text" />
+            </div>
+        </div>
+        <div class="row">
+            <label class="col-4" for="bookmark">Offer User Token</label>
+            <div class="col-8">
+                <input id="offerUserToken" type="text" />
+            </div>
+        </div>
+        <div class="row">
+            <label class="col-4" for="bookmark">Show Cancel Dialog on L1</label>
+            <div class="col-8">
+                <label class="switch">
+                    <input id="showExitConfirmationOnCheckoutScreen" type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+        <div class="row">
+            <label class="col-4" for="bookmark">Show Cancel Dialog on Payment Screen</label>
+            <div class="col-8">
+                <label class="switch">
+                    <input id="showExitConfirmationOnPaymentScreen" type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+        <div class="row">
+            <label class="col-4" for="bookmark">Enable Split Pay</label>
+            <div class="col-8">
+                <label class="switch">
+                    <input id="enableSplitPay" type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+        <div class="row">
+            <label class="col-4" for="bookmark">Enable Enforcement</label>
+            <div class="col-8">
+                <label class="switch">
+                    <input id="enableEnforcePay" type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+        <h2>CB Customizations</h2>
+        <div class="row">
+            <label class="col-4" for="bookmark">CB Tool Bar(Android)</label>
+            <div class="col-8">
+                <label class="switch">
+                    <input id= "showCbToolbar" type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+        <div class="row">
+            <label class="col-4" for="bookmark">Auto OTP Select(Android)</label>
+            <div class="col-8">
+                <label class="switch">
+                    <input id= "autoSelectOtp" type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+        <div class="row">
+            <label class="col-4" for="bookmark">Auto OTP Submit(Android)</label>
+            <div class="col-8">
+                <label class="switch">
+                    <input id= "autoApprove" type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+        <div class="row">
+            <label class="col-4" for="bookmark">SMS Permission</label>
+            <div class="col-8">
+                <label class="switch">
+                    <input id= "merchantSMSPermission" type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+        <div class="row">
+            <label class="col-4" for="bookmark">Merchant Response Timeout</label>
+            <div class="col-8">
+                <input id="merchantResponseTimeout" type="text" />
+            </div>
+        </div>
+        <div class="row">
+            <label class="col-4" for="bookmark">Enable SI</label>
+            <div class="col-8">
+                <label class="switch">
+                    <input id="enableSI" type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+                        <div class="col-5" style="text-align: center;">
+                            <button id="payment" class="btn" onclick="app.addBookmark()">Payment</button>
+                        </div>
+    </div>
+    <div>
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/res/sha512.js"></script>
+    <script type="text/javascript" src="js/sample.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>

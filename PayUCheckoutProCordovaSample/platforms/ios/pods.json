@@ -1,0 +1,17 @@
+{
+    "declarations": {
+        "use_frameworks!": {
+            "declaration": "use_frameworks!",
+            "count": 1
+        }
+    },
+    "sources": {},
+    "libraries": {
+        "PayUIndia-CheckoutPro": {
+            "name": "PayUIndia-CheckoutPro",
+            "type": "podspec",
+            "spec": "~>5.4",
+            "count": 1
+        }
+    }
+}
