@@ -8,10 +8,10 @@ var defaultValue = function() {
     document.getElementById("phone").value = "9999999999";
     document.getElementById("email").value = "test@gmail.com";
     document.getElementById("amount").value = "1.0";
-    document.getElementById("ios_surl").value = "https://payu.herokuapp.com/ios_success";
-    document.getElementById("ios_furl").value = "https://payu.herokuapp.com/ios_failure";
-    document.getElementById("android_surl").value = "https://payu.herokuapp.com/success";
-    document.getElementById("android_furl").value = "https://payu.herokuapp.com/failure";
+    document.getElementById("ios_surl").value = "https://cbjs.payu.in/sdk/success";
+    document.getElementById("ios_furl").value = "https://cbjs.payu.in/sdk/failure";
+    document.getElementById("android_surl").value = "https://cbjs.payu.in/sdk/success";
+    document.getElementById("android_furl").value = "https://cbjs.payu.in/sdk/failure";
     document.getElementById("userCredential").value = "umang:arya";
     document.getElementById("offerUserToken").value = "anshul_bajpai_token";
 
